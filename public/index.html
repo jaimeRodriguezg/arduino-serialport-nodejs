@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>node-arduino</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class = "row">
+            <div class = "col">
+                <div class="card">
+                    <div class = "cronometro">
+                            <p>Tiempo</p>
+                            <p id="time">
+                                <span id="minutos">00</span>:<span id="segundos">00</span>
+                            </p>                            
+                    </div>
+                </div>  
+            </div>
+            <div class = "col">
+                <div class ="card">
+                    <div class = "datos">
+                        <p>N° Datos</p>
+                        <span id="datos">0</span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <div class = "grafico">
+        <canvas id="myChart"></canvas>
+    </div>
+    <script src = "socket.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <script src= "js/socket-custom.js"></script>
+    
+    
+    
+
+    <script>
+        var cronometro;
+        function comenzar(){
+            seconds = 0;
+            s = document.getElementById("segundos");
+            m = document.getElementById("minutos");
+
+            cronometro = setInterval(function(){
+
+                seconds++;
+                secs = seconds;
+                mins = 0;
+                while(secs >= 60){
+                    mins++;
+                    secs-=60;
+                }
+                if(mins < 10){
+                    m.innerHTML = "0" + mins;
+                }else{
+                    m.innerHTML = mins;
+                }
+
+                if(secs < 10){
+                    s.innerHTML = "0" + secs;
+                }else{
+                    s.innerHTML = secs;
+                }
+                
+                
+
+
+                
+            },1000)
+        }
+
+        comenzar();
+    </script>
+    
+
+
+</body>
+</html>

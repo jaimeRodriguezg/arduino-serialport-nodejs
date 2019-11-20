@@ -1,0 +1,22 @@
+.grafico {
+    width: 80%;
+    padding-left: 20%;
+    padding-top: 2%;
+}
+
+.cronometro {
+    text-align: center;
+    
+}
+
+.datos{
+    text-align: center;
+}
+
+.card {
+    padding-top: 5%;
+}
+
+.row{
+    padding-top: 5%;
+}
