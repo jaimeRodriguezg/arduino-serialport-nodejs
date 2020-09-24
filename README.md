@@ -1,6 +1,6 @@
 # arduino-serialport-nodejs
 
-#Subir programa al arduino
+### Subir programa al arduino
 *hecho en arduino uno
 
 Conectar el arduino uno y subir el archivo que se encuentra en arduino/contador/contador.ino
@@ -10,6 +10,7 @@ Anotar el puerto del arduino para su posterior ejecucion en nodejs
 #Para instalar modulos de node
 
 Ingresar en consola:
+
 `npm install`
 
 #Para ejecutar estando dentro de la carpeta del programa
