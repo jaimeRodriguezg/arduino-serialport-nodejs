@@ -10,7 +10,7 @@ Anotar el puerto del arduino para su posterior ejecucion en nodejs
 #Para instalar modulos de node
 
 Ingresar en consola:
-npm install
+´npm install´
 
 
 #Para ejecutar estando dentro de la carpeta del programa
